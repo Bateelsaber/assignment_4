@@ -4,7 +4,7 @@
 // The ball bounces when it hits the side of the canvas
 // and when it hits a mouse controlled paddle.
 
-// This challenge contains multiple syntax, runtime, and 
+// This challenge contains multiple syntax, runtime, and
 // logical errors. Find and fix the errors to make it work.
 
 
@@ -36,31 +36,30 @@ setup() {
 
 // draw: called by p5 repeatedly to draw the game
 function draw() {
-	
+
 	//////////////////////////////
 	// update
 
-	updateBall); 
-	paddle.x = mouseY;
+	updateBall);
+paddle.x = mouseY;
 
 
-	//////////////////////////////
-	// draw
+//////////////////////////////
+// draw
 
-	background(50, 50, 50);
-	circle(ball.x, ball.y, ball.radius * 2, ball.radius * 2);
-	square(paddle.x - paddle.width * 0.5, paddle.y, paddle.width, paddle.height);
+background(50, 50, 50);
+circle(ball.x, ball.y, ball.radius * 2, ball.radius * 2);
+square(paddle.x - paddle.width * 0.5, paddle.y, paddle.width, paddle.height);
 
 }
 
 
 // updateBall: move the ball, then detect and respond to collisions
-function updateBall() 
-{
+function updateBall() {
 	// change position
 	ball.x = ball.x + ball.speedX;
 	ball.y = ball.y + ball.speedY;
-	
+
 
 	// don't let the ball go through the walls
 
@@ -87,7 +86,8 @@ function updateBall()
 	// check for a *collision* between the ball and the paddle
 	// look up the && operator
 
-	if (ball.x > (paddle.x - paddle.width * 0.5) && ball.x < (paddle.x + paddle.width * 0.5) && ball.y > paddle.y - ball.radius) {
+	if (ball.x > (paddle.x - paddle.width * 0.5) && ball.x < (paddle.x + paddle.width *
+			0.5) && ball.y > paddle.y - ball.radius) {
 		if (ball.speedY > 0) {
 			ball.speedY = -ball.speedY;
 		}
