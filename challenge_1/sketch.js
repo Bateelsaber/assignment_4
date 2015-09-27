@@ -11,6 +11,7 @@ function draw() {
 	// draw rectangle
 	fill(50, 200, 90);
 	rect(0, 210, 640, 350);
+	// draw flowers
 	for (var i = 0; i < 40; i++) {
 		drawTarget(random(10, 630), random(140, 340), 40);
 	}
