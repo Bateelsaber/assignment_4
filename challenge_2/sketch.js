@@ -40,16 +40,16 @@ function draw() {
 	//////////////////////////////
 	// update
 
-	updateBall);
-paddle.x = mouseY;
+	updateBall();
+	paddle.x = mouseY;
 
 
-//////////////////////////////
-// draw
+	//////////////////////////////
+	// draw
 
-background(50, 50, 50);
-circle(ball.x, ball.y, ball.radius * 2, ball.radius * 2);
-square(paddle.x - paddle.width * 0.5, paddle.y, paddle.width, paddle.height);
+	background(50, 50, 50);
+	ellipse(ball.x, ball.y, ball.radius * 2, ball.radius * 2);
+	rect(paddle.x - paddle.width * 0.5, paddle.y, paddle.width, paddle.height);
 
 }
 
@@ -64,12 +64,12 @@ function updateBall() {
 	// don't let the ball go through the walls
 
 	// right
-	if (ball.x > width - ball.radius) {
+	if (ball.x > 640 - ball.radius) {
 		ball.speedX = -ball.speedX;
 	}
 
 	// bottom
-	if (ball.y > height - ball.radius) {
+	if (ball.y > 480 - ball.radius) {
 		ball.speedY = ball.speedY;
 	}
 
@@ -87,9 +87,9 @@ function updateBall() {
 	// look up the && operator
 
 	if (ball.x > (paddle.x - paddle.width * 0.5) && ball.x < (paddle.x + paddle.width *
-			0.5) && ball.y > paddle.y - ball.radius) {
-		if (ball.speedY > 0) {
-			ball.speedY = -ball.speedY;
+			0.5) && ball.y > (paddle.y - ball.radius) {
+			if (ball.speedY > 0) {
+				ball.speedY = -ball.speedY;
+			}
 		}
 	}
-}
