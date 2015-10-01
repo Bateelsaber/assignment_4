@@ -21,14 +21,14 @@ var ball = {
 // paddle: a data object to hold info about the ball
 var paddle = {
 	x: 0,
-	y: 350
+	y: 350,
 	width: 300,
 	height: 30,
 };
 
 
 // setup: called by p5 once at startup
-setup() {
+function setup() {
 	createCanvas(640, 480);
 	noStroke();
 }
