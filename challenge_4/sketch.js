@@ -8,6 +8,7 @@ function setup() {
 		xPosition[i] = random(0, 640);
 		yPosition[i] = random(0, 480);
 
+
 	}
 }
 

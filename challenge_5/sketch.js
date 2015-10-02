@@ -8,6 +8,10 @@ function setup() {
 
 function draw() {
 	background(50, 0, 0);
+	ellipse(mouseX, mouseY, 70, 70);
+	fill(0, 100, 250);
+	noStroke();
+	ellipse(mouseX, mouseY, 40, 40);
 	strokeWeight(10);
 	if (!mouseIsPressed) {
 		a = mouseX;
