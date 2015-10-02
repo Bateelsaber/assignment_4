@@ -1,9 +1,8 @@
-var position =
-	function setup() {
-		// create a place to draw
-		createCanvas(640, 360);
-		noStroke();
-	}
+function setup() {
+	// create a place to draw
+	createCanvas(640, 360);
+	noStroke();
+}
 
 function draw() {
 	background(50, 0, 0);
